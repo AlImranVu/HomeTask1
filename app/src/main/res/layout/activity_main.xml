@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/first_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F11414"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Currency Converter"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/my_balance_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_text_view"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="my balance"
+        android:textAllCaps="true"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/bellow_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="#008FDA"
+        android:layout_below="@+id/my_balance_view"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/ev_balance_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bellow_line"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="1000 EUR     00 USD     00 BAN    00 LAN "
+        android:textColor="#434343"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/currency_exchange_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ev_balance_view"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Currency exchange"
+        android:textAllCaps="true"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/bellow_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#008FDA"
+
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_below="@+id/currency_exchange_view"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/sell_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bellow_line_1"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/balance_sell_shape"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_arrow_upward"
+            app:layout_constraintBottom_toTopOf="@id/main_layout"
+            app:layout_constraintEnd_toEndOf="@id/main_layout"
+            app:layout_constraintStart_toStartOf="@id/main_layout"
+            app:layout_constraintTop_toTopOf="@id/main_layout" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="   Sell    "
+            android:textColor="#434343"
+            android:textSize="15sp" />
+
+
+        <EditText
+            android:layout_width="183sp"
+            android:layout_height="wrap_content"
+            android:height="50dp"
+            android:textDirection="rtl"
+            android:inputType="phone" />
+
+
+        <Spinner
+            android:layout_width="97dp"
+            android:layout_height="match_parent"
+            android:contextClickable="true"
+            android:tooltipText="USD" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sell_layout"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/message_btn_shape"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_arrow_downward"
+            app:layout_constraintBottom_toTopOf="@id/main_layout"
+            app:layout_constraintEnd_toEndOf="@id/main_layout"
+            app:layout_constraintStart_toStartOf="@id/main_layout"
+            app:layout_constraintTop_toTopOf="@id/main_layout" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Receive"
+            android:textColor="#434343"
+            android:textSize="15sp" />
+
+
+        <EditText
+            android:layout_width="183sp"
+            android:layout_height="wrap_content"
+            android:height="50dp"
+            android:inputType="phone" />
+
+
+        <Spinner
+            android:layout_width="97dp"
+            android:layout_height="match_parent"
+            android:tooltipText="USD" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+
+            android:id="@+id/submit_btn"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bt_shape"
+            android:gravity="center"
+            android:text="submit"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="105dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
