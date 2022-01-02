@@ -42,22 +42,95 @@
         android:layout_below="@+id/my_balance_view"
         android:orientation="vertical" />
 
-    <TextView
-        android:id="@+id/ev_balance_view"
+
+    <LinearLayout
+        android:id="@+id/ev_balance_view_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bellow_line"
-        android:padding="10dp"
         android:gravity="center"
-        android:text="1000 EUR     00 USD     00 BAN    00 LAN "
-        android:textColor="#434343"
-        android:textSize="20sp" />
+        android:layout_below="@id/bellow_line"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/eur_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="1000"
+            android:textColor="#434343"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="EUR"
+            android:textColor="#434343"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/usd_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="00"
+            android:textColor="#434343"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="USD"
+            android:textColor="#434343"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/bdt_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="00"
+            android:textColor="#434343"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="BDT"
+            android:textColor="#434343"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/currency_exchange_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ev_balance_view"
+        android:layout_below="@+id/ev_balance_view_layout"
         android:gravity="center"
         android:padding="10dp"
         android:text="Currency exchange"
@@ -108,7 +181,8 @@
 
 
         <EditText
-            android:layout_width="183sp"
+            android:id="@+id/et_firstConversion"
+            android:layout_width="170sp"
             android:layout_height="wrap_content"
             android:height="50dp"
             android:textDirection="rtl"
@@ -116,10 +190,10 @@
 
 
         <Spinner
+            android:id="@+id/spinner_firstConversion"
             android:layout_width="97dp"
             android:layout_height="match_parent"
-            android:contextClickable="true"
-            android:tooltipText="USD" />
+            />
 
     </LinearLayout>
 
@@ -154,16 +228,18 @@
 
 
         <EditText
-            android:layout_width="183sp"
+            android:id="@+id/et_secondConversion"
+            android:layout_width="170sp"
             android:layout_height="wrap_content"
             android:height="50dp"
             android:inputType="phone" />
 
 
         <Spinner
+
+            android:id="@+id/spinner_secondConversion"
             android:layout_width="97dp"
-            android:layout_height="match_parent"
-            android:tooltipText="USD" />
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
 
